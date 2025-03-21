@@ -211,6 +211,8 @@ fn test_heap_nested() {
     println!("X<A/#0>, {}",output.contains("X<A/#0>"));
     println!("Y<B/#0>, {}",output.contains("Y<B/#0>"));
     println!("Example<A/#0, B/#1, T/#2, S/#3>), {}",output.contains("Example<A/#0, B/#1, T/#2, S/#3>"));
+    println!("(1, [1,1,0,1]), {}",output.contains("(1, [1,1,0,1])"));
+
     assert_eq!(
         output.contains("X<A/#0> (0, [1])")
             && output.contains("Y<B/#0> (0, [1])")
