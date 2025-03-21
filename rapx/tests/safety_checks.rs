@@ -214,9 +214,9 @@ fn test_heap_nested() {
     println!("(1, [1,1,0,1]), {}",output.contains("(1, [1,1,0,1])"));
 
     assert_eq!(
-        output.contains("X<A/#0> (0, [1])")
-            && output.contains("Y<B/#0> (0, [1])")
-            && output.contains("Example<A/#0, B/#1, T/#2, S/#3> (1, [1,1,0,1])"),
+        output.contains("X<A/#0>\u{1b}[0m \u{1b}[38;5;148m(0, [1])")
+            && output.contains("Y<B/#0>\u{1b}[0m \u{1b}[38;5;148m(0, [1])")
+            && output.contains("Example<A/#0, B/#1, T/#2, S/#3>\u{1b}[0m \u{1b}[38;5;148m(1, [1,1,0,1])"),
         true
     );
 }
