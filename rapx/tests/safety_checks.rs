@@ -13,9 +13,10 @@ fn running_tests_with_arg(dir: &str, arg: &str) -> String {
         .output()
         .expect("Failed to execute cargo rapx");
 
-    println!("out:{:?}", String::from_utf8_lossy(&output.stderr).into_owned());
+        let s = String::from_utf8_lossy(&output.stderr).into_owned();
+    println!("out:{:?}", s);
 
-    String::from_utf8_lossy(&output.stderr).into_owned()
+    s
 }
 
 #[test]
