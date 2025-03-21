@@ -1,10 +1,15 @@
+#[derive(Debug)]
 struct X<A> {
     a: A,
 }
+
+#[derive(Debug)]
 struct Y<B> {
     a: (i32, (f64, B)),
     b: X<i32>,
 }
+
+#[derive(Debug)]
 struct Example<A, B, T, S> {
     a: X<A>,
     b: (i32, (f64, B)),
