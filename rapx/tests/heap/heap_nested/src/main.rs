@@ -14,7 +14,7 @@ struct Example<A, B, T, S> {
 }
 
 fn main() {
-    let _example = Example {
+    let example = Example {
         a: X { a: 1 },
         b: (1, (1.0, 1)),
         c: [[(1); 1]; 2],
@@ -24,4 +24,6 @@ fn main() {
             b: X { a: 1 },
         },
     };
+
+    println!("{:?}", example);
 }
