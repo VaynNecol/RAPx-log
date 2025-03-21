@@ -8,7 +8,7 @@ fn main() {
             let unsafe_cell = UnsafeCell::new(1);
             let ref_cell = RefCell::new(1);
             let lazy_cell = LazyCell::new(|| 92);
-            println!("{:?}", cell, unsafe_cell, ref_cell, lazy_cell);
+            println!("{:?} {:?} {:?} {:?}", cell, unsafe_cell, ref_cell, lazy_cell);
         }
     }
 
@@ -20,7 +20,7 @@ fn main() {
             let unique_rc = UniqueRc::new(1);
             let weak_rc:Weak1<i32> = Weak1::new();
             let weak_arc:Weak2<i32>  = Weak2::new();
-            println!("{:?}", rc, arc, unique_rc, weak_rc, weak_arc);
+            println!("{:?} {:?} {:?} {:?} {:?}", rc, arc, unique_rc, weak_rc, weak_arc);
         }
     }
 }
