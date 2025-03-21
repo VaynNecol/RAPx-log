@@ -13,8 +13,8 @@ fn running_tests_with_arg(dir: &str, arg: &str) -> String {
         .output()
         .expect("Failed to execute cargo rapx");
 
-    let stderr = String::from_utf8_lossy(&output.stderr);
-    println!("STDERR:\n{}", stderr);
+    // let stderr = String::from_utf8_lossy(&output.stderr);
+    // println!("STDERR:\n{}", stderr);
 
     let s = String::from_utf8_lossy(&output.stderr).into_owned();
     s
